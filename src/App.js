@@ -6,12 +6,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Store from "./pages/store";
 import Success from "./pages/success";
 import Cancel from "./pages/cancel";
+import { CartProvider } from "./cartcontext";
 
 const apiKey = process.env.STRIPE_KEY;
 
 function App() {
-
   return (
+    <CartProvider>
     <Container>
       <NavBarComponent></NavBarComponent>
       <BrowserRouter>
@@ -22,6 +23,7 @@ function App() {
         </Routes>      
       </BrowserRouter>
     </Container>
+    </CartProvider>
   );
 }
 
