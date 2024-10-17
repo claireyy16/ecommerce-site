@@ -30,7 +30,7 @@ function NavBarComponent () {
     return (
         <>
         <Navbar expand="sm">
-        <Navbar.Brand href='/'>Ecommerce Store</Navbar.Brand>
+        <Navbar.Brand href='/'>crochet store!</Navbar.Brand>
         <Navbar.Toggle/>
         <Navbar.Collapse className='justify-content-end'>
             <Button onClick={handleShow}>Cart: ({productsCount} Items)</Button>
