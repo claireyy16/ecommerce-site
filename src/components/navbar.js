@@ -1,3 +1,4 @@
+import '../styles/navbar.css';
 import { Button, Navbar, Modal } from 'react-bootstrap'
 import { useContext, useState } from 'react';
 import { cartcontext } from '../cartcontext';
@@ -43,6 +44,7 @@ function NavBarComponent () {
                     {productsCount > 0 ? 
                         <>
                             <p>Items in your cart!</p>
+                            <hr/>
                             {cart.items.map((currentProduct, idx) => (
                                 <h1 key={idx}>{currentProduct.title}</h1>
                             ))}

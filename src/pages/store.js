@@ -1,3 +1,4 @@
+import '../styles/styles.css';
 import {Row, Col} from 'react-bootstrap';
 import { PRODUCTS } from '../productsArr';
 import ProductCard from '../components/productCard';

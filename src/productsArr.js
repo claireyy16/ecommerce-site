@@ -1,4 +1,7 @@
-import test from './/assets/test.jpg'
+import yellow from './assets/yellow-cow.jpg';
+import love from './assets/love-cow.jpg';
+import spider from './assets/spiderman.jpg';
+
 //const apiKey = process.env.STRIPE_KEY;
 
 const REACT_APP_KEY_ONE = process.env.REACT_APP_KEY_ONE;
@@ -9,21 +12,21 @@ const REACT_APP_KEY_THREE = process.env.REACT_APP_KEY_THREE;
 const PRODUCTS = [
     {
         id: REACT_APP_KEY_ONE,
-        title: "a",
+        title: "yellow cow",
         price: 1.00,
-        productImage: test,
+        productImage: yellow,
     },
     {
         id: REACT_APP_KEY_TWO,
-        title: "b",
+        title: "heart cow",
         price: 2.00,
-        productImage: test,
+        productImage: love,
     },
     {
         id: REACT_APP_KEY_THREE,
-        title: "c",
+        title: "spiderman",
         price: 3.00,
-        productImage: test,
+        productImage: spider,
     }
 ];
 
