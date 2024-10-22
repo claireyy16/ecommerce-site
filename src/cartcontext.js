@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { getProductData, PRODUCTS } from "./productsArr";
+import { getProductData } from "./productsArr";
 
 // Define the context with a default value
 export const cartcontext = createContext({

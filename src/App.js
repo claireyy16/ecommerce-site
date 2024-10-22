@@ -8,7 +8,6 @@ import Success from "./pages/success";
 import Cancel from "./pages/cancel";
 import { CartProvider } from "./cartcontext";
 
-const apiKey = process.env.STRIPE_KEY;
 
 function App() {
   return (
