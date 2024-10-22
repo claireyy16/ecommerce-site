@@ -5,10 +5,8 @@ import { getProductData } from "../productsArr";
 
 function CartProduct(props) {
     const cart = useContext(cartcontext);
-    const {id, quantity, title, image} = props;
+    const {id, quantity} = props;
     const productData = getProductData(id);
-    console.log(productData.title);
-
     if (!productData) {
         return <p>Product data not available.</p>;
     }
