@@ -1,6 +1,8 @@
-import { Button, Navbar, Modal } from 'react-bootstrap'
+import '../styles/navbar.css';
+import { Col, Button, Navbar, Nav, Modal } from 'react-bootstrap'
 import { useContext, useState } from 'react';
 import { cartcontext } from '../cartcontext';
+import CartProduct from './CartProduct';
 
 function NavBarComponent () {
     const cart = useContext(cartcontext);
@@ -30,21 +32,30 @@ function NavBarComponent () {
     return (
         <>
         <Navbar expand="sm">
-        <Navbar.Brand href='/'>crochet store!</Navbar.Brand>
+        <Navbar.Brand href='/'>claire's crochet!</Navbar.Brand>
+        <Nav className="me-auto"> 
+            <Nav.Link href='/'>home</Nav.Link>
+            <Nav.Link href="store">store</Nav.Link>
+            <Nav.Link href='aboutme'>about me</Nav.Link>
+        </Nav>
         <Navbar.Toggle/>
         <Navbar.Collapse className='justify-content-end'>
             <Button onClick={handleShow}>Cart: ({productsCount} Items)</Button>
         </Navbar.Collapse>
         </Navbar>
-        <Modal show={show} onHide={handleClose}>
+        <Modal style={{}} show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-                <Modal.Title>Shopping Cart</Modal.Title>
+                <Modal.Title id='contained-modal-title-vcenter'>Shopping Cart</Modal.Title>
+            </Modal.Header>
                 <Modal.Body>
                     {productsCount > 0 ? 
                         <>
                             <p>Items in your cart!</p>
                             {cart.items.map((currentProduct, idx) => (
-                                <h1 key={idx}>{currentProduct.title}</h1>
+                                <Col align="center" key={idx}>
+                               <CartProduct product={currentProduct}></CartProduct>
+                               </Col> 
+                               // <h1 key={idx}>{currentProduct.title}</h1>
                             ))}
 
                             <h1>Total: {cart.getTotalCost().toFixed(2)}</h1>
@@ -56,7 +67,6 @@ function NavBarComponent () {
                         <h1>no items!</h1>
                     }
                 </Modal.Body>
-            </Modal.Header>
         </Modal>
         </>
     )

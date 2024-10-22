@@ -1,17 +1,32 @@
+import '../styles/card.css';
 import { Card, Button, Form, Row, Col } from 'react-bootstrap';
 import { cartcontext } from '../cartcontext';
 import { useContext } from 'react';
+
+import yellowCowImage from '../assets/yellow-cow.jpg';
+import loveCowImage from '../assets/love-cow.jpg';
+import spidermanImage from '../assets/spiderman.jpg';
+
+const images = {
+  'yellow': yellowCowImage,
+  'love': loveCowImage,
+  'spiderman': spidermanImage,
+};
+
 
 function ProductCard(props) { // props.product is the product we are selling
     const product = props.product;
     const cart = useContext(cartcontext);
     const productQuantity = cart.getProductQuantity(product.id);
-    console.log(cart.items);
+    const productImage = images[product.image];
+
     return (
         <Card>
             <Card.Body>
                 <Card.Title>{product.title}</Card.Title>
                 <Card.Text>${product.price}</Card.Text>
+                <Card.Img variant="top" src={productImage} alt={product.title} className="card-img prodImg" />
+                <hr/>
                 { productQuantity > 0 ?
                     <>
                         <Form as={Row}>
@@ -28,6 +43,7 @@ function ProductCard(props) { // props.product is the product we are selling
                 }
             </Card.Body>
         </Card>
+        
     )
 }
 

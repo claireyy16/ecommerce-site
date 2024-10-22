@@ -1,5 +1,4 @@
-import test from './/assets/test.jpg'
-//const apiKey = process.env.STRIPE_KEY;
+ //const apiKey = process.env.STRIPE_KEY;
 
 const REACT_APP_KEY_ONE = process.env.REACT_APP_KEY_ONE;
 const REACT_APP_KEY_TWO = process.env.REACT_APP_KEY_TWO;
@@ -9,21 +8,21 @@ const REACT_APP_KEY_THREE = process.env.REACT_APP_KEY_THREE;
 const PRODUCTS = [
     {
         id: REACT_APP_KEY_ONE,
-        title: "a",
+        title: "yellow cow",
         price: 1.00,
-        productImage: test,
+        image: 'yellow'
     },
     {
         id: REACT_APP_KEY_TWO,
-        title: "b",
+        title: "heart cow",
         price: 2.00,
-        productImage: test,
+        image: 'love'
     },
     {
         id: REACT_APP_KEY_THREE,
-        title: "c",
+        title: "spiderman",
         price: 3.00,
-        productImage: test,
+        image: 'spiderman'
     }
 ];
 

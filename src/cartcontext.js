@@ -1,6 +1,7 @@
 import { createContext, useState } from "react";
 import { getProductData } from "./productsArr";
 
+
 // Define the context with a default value
 export const cartcontext = createContext({
     items: [],
@@ -21,10 +22,17 @@ export function CartProvider({ children }) {
 
     function addOneToCart(id) {
         const quantity = getProductQuantity(id);
+        const productData = getProductData(id);
+
         if (quantity === 0) {
             setCartProducts([
                 ...cartProducts,
-                { id: id, quantity: 1 },
+                { 
+                    id: id, 
+                    quantity: 1,
+                    title: productData.title,
+                    image: productData.image
+                },
             ]);
         } else {
             setCartProducts(
