@@ -1,7 +1,7 @@
-function Cancel() {
+function Home() {
     return (
-        <h1>Sorry to see you cancelled your Stripe payment!</h1>
+        <h1>welcome to my site!</h1>
     )
 }
 
-export default Cancel;
+export default Home;

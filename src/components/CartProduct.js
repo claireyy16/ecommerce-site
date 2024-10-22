@@ -5,16 +5,20 @@ import { getProductData } from "../productsArr";
 
 function CartProduct(props) {
     const cart = useContext(cartcontext);
-    const id = props.id;
-    const quantity = props.quantity;
+    const {id, quantity, title, image} = props;
     const productData = getProductData(id);
+    console.log(productData.title);
+
+    if (!productData) {
+        return <p>Product data not available.</p>;
+    }
 
     return (
         <>
             <h3>{productData.title}</h3>
             <p>{quantity} total</p>
             <p>${(quantity * productData.price).toFixed(2)}</p>
-            <Button size="sm" onClick={() => cart.deleteFromCart}>Remove</Button>
+            <Button size="sm" onClick={() => cart.deleteFromCart(id)}>Remove</Button>
             <hr></hr>
         </>
     )

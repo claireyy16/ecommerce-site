@@ -14,7 +14,7 @@ function ProductCard(props) { // props.product is the product we are selling
             <Card.Body>
                 <Card.Title>{product.title}</Card.Title>
                 <Card.Text>${product.price}</Card.Text>
-                <img src={product.image} alt={product.title} className="card-img" />
+                <Card.Img variant="top" src={product.image} alt={product.title} className="card-img" />
                 <hr/>
                 { productQuantity > 0 ?
                     <>
@@ -32,6 +32,7 @@ function ProductCard(props) { // props.product is the product we are selling
                 }
             </Card.Body>
         </Card>
+        
     )
 }
 
