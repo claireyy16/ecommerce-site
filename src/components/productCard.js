@@ -1,4 +1,4 @@
-import '../styles/card.css';
+import '../styles/styles.css';
 import { Card, Button, Form, Row, Col } from 'react-bootstrap';
 import { cartcontext } from '../cartcontext';
 import { useContext } from 'react';
