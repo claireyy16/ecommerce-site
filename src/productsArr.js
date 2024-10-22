@@ -20,7 +20,7 @@ const PRODUCTS = [
     },
     {
         id: REACT_APP_KEY_THREE,
-        title: "spiderman",
+        title: "bunny",
         price: 3.00,
         image: 'spiderman'
     }

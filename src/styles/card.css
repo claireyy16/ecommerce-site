@@ -1,3 +1,6 @@
 .prodImg {
-    aspect-ratio: initial;
+    height: 300px;
+    width: auto;
 }
+
+/**.cardGrid{}**/

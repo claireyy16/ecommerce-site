@@ -1,4 +1,4 @@
-import '../styles/styles.css';
+import '../styles/card.css';
 import { Card, Button, Form, Row, Col } from 'react-bootstrap';
 import { cartcontext } from '../cartcontext';
 import { useContext } from 'react';
@@ -22,10 +22,10 @@ function ProductCard(props) { // props.product is the product we are selling
 
     return (
         <Card>
-            <Card.Body>
+            <Card.Body className>
                 <Card.Title>{product.title}</Card.Title>
                 <Card.Text>${product.price}</Card.Text>
-                <Card.Img variant="top" src={productImage} alt={product.title} className="card-img prodImg" />
+                <Card.Img variant="top" src={productImage} alt={product.title} className="prodImg card-img" />
                 <hr/>
                 { productQuantity > 0 ?
                     <>
