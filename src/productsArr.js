@@ -1,12 +1,4 @@
-import yellow from './assets/yellow-cow.jpg';
-import love from './assets/love-cow.jpg';
-import spider from './assets/spiderman.jpg';
-
-const yellowTest = require('./assets/yellow-cow.jpg').default;
-
-
-
-//const apiKey = process.env.STRIPE_KEY;
+ //const apiKey = process.env.STRIPE_KEY;
 
 const REACT_APP_KEY_ONE = process.env.REACT_APP_KEY_ONE;
 const REACT_APP_KEY_TWO = process.env.REACT_APP_KEY_TWO;
@@ -18,19 +10,19 @@ const PRODUCTS = [
         id: REACT_APP_KEY_ONE,
         title: "yellow cow",
         price: 1.00,
-        productImage: yellowTest
+        image: 'yellow'
     },
     {
         id: REACT_APP_KEY_TWO,
         title: "heart cow",
         price: 2.00,
-        productImage: love
+        image: 'love'
     },
     {
         id: REACT_APP_KEY_THREE,
         title: "spiderman",
         price: 3.00,
-        productImage: spider
+        image: 'spiderman'
     }
 ];
 
