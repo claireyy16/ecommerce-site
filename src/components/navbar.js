@@ -51,6 +51,7 @@ function NavBarComponent () {
                     {productsCount > 0 ? 
                         <>
                             <p>Items in your cart!</p>
+                            <hr/>
                             {cart.items.map((currentProduct, idx) => (
                                 <Col align="center" key={idx}>
                                <CartProduct product={currentProduct}></CartProduct>
