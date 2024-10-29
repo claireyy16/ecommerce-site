@@ -6,7 +6,8 @@ import { getProductData } from "../productsArr";
 function CartProduct(props) {
     const cart = useContext(cartcontext);
     const {id, quantity} = props;
-    const productData = getProductData(id);
+    console.log("ID passed to CartProduct:", id);
+    const productData = getProductData(String(id));
     if (!productData) {
         return <p>Product data not available.</p>;
     }

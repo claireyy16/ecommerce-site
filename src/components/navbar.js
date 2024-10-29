@@ -52,13 +52,11 @@ function NavBarComponent () {
                         <>
                             <p>Items in your cart!</p>
                             <hr/>
-                            {cart.items.map((currentProduct, idx) => (
-                                <Col align="center" key={idx}>
-                               <CartProduct product={currentProduct}></CartProduct>
-                               </Col> 
-                               // <h1 key={idx}>{currentProduct.title}</h1>
+                            {cart.items.map((item) => (
+                                <Col align="center" key={item.id}> {/* Use item.id as the key */}
+                                    <CartProduct id={item.id} quantity={item.quantity} /> {/* Pass id and quantity as props */}
+                                </Col>
                             ))}
-
                             <h1>Total: {cart.getTotalCost().toFixed(2)}</h1>
                             <Button variant="success" onClick={checkout}> 
                                 Purchase items!

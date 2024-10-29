@@ -16,13 +16,18 @@ export function CartProvider({ children }) {
     const [cartProducts, setCartProducts] = useState([]);
 
     function getProductQuantity(id) {
+        //console.log("Checking quantity for ID:", id); // Log the ID being checked
+        //console.log("Current cart products:", cartProducts); // Log the current cart products
         const quantity = cartProducts.find((product) => product.id === id)?.quantity;
-        return quantity === undefined ? 0 : quantity;
+        //console.log("Quantity found:", quantity); // Log the quantity found (or undefined)
+        return quantity === undefined ? 0 : quantity; // Return quantity or 0 if undefined
     }
+    
 
     function addOneToCart(id) {
         const quantity = getProductQuantity(id);
         const productData = getProductData(id);
+        console.log('Product Data:', productData); // Add this line
 
         if (quantity === 0) {
             setCartProducts([

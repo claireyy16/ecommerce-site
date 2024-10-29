@@ -20,14 +20,18 @@ const PRODUCTS = [
     },
     {
         id: REACT_APP_KEY_THREE,
-        title: "bunny",
+        title: "spiderman",
         price: 3.00,
         image: 'spiderman'
     }
 ];
 
 function getProductData(id) {
-    let productData = PRODUCTS.find(product => product.id === id);
+    console.log(id);
+    let productData = PRODUCTS.find(product => {
+        return product.id === id;
+    });
+        console.log(productData);
 
     if (productData === undefined) {
         console.log("Product data does not exist for ID:" + id);
