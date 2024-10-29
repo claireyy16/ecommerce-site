@@ -5,3 +5,15 @@
 .infoText {
     line-height: 30px;
 }
+
+.button {
+    color: white;
+    background-color: #9862a2 !important;
+    border: white;
+    box-shadow: 0 0 0 100vmax inset rgb(0 0 0/var(--o,0%));
+    transition: .4s;
+  }
+  
+  .button:hover {
+    --o: 40%;
+  }

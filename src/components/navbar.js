@@ -1,4 +1,5 @@
 import '../styles/navbar.css';
+import "../styles/styles.css";
 import { Col, Button, Navbar, Nav, Modal } from 'react-bootstrap'
 import { useContext, useState } from 'react';
 import { cartcontext } from '../cartcontext';
@@ -40,7 +41,7 @@ function NavBarComponent () {
         </Nav>
         <Navbar.Toggle/>
         <Navbar.Collapse className='justify-content-end'>
-            <Button onClick={handleShow}>Cart: ({productsCount} Items)</Button>
+            <Button className="button" onClick={handleShow}>Cart: ({productsCount} Items)</Button>
         </Navbar.Collapse>
         </Navbar>
         <Modal style={{}} show={show} onHide={handleClose}>
@@ -50,17 +51,20 @@ function NavBarComponent () {
                 <Modal.Body>
                     {productsCount > 0 ? 
                         <>
+                        <div className='itemsTitle'>
                             <p>Items in your cart!</p>
-                            <hr/>
+                        </div>
                             {cart.items.map((item) => (
                                 <Col align="center" key={item.id}> {/* Use item.id as the key */}
                                     <CartProduct id={item.id} quantity={item.quantity} /> {/* Pass id and quantity as props */}
                                 </Col>
                             ))}
-                            <h1>Total: {cart.getTotalCost().toFixed(2)}</h1>
-                            <Button variant="success" onClick={checkout}> 
-                                Purchase items!
-                            </Button>
+                            <div className='checkoutSection'>
+                                <h1 className='cost'>Total: {cart.getTotalCost().toFixed(2)}</h1>
+                                <Button variant="success" onClick={checkout}> 
+                                    Purchase items!
+                                </Button>
+                            </div>
                         </>
                     :
                         <h1>no items!</h1>

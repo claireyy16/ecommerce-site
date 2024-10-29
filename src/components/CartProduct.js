@@ -1,3 +1,5 @@
+import "../styles/styles.css";
+import "../styles/cartProd.css"
 import { Button } from "react-bootstrap";
 import { cartcontext } from "../cartcontext";
 import { useContext } from "react";
@@ -14,11 +16,18 @@ function CartProduct(props) {
 
     return (
         <>
+            <div className="product-grid">           
             <h3>{productData.title}</h3>
-            <p>{quantity} total</p>
-            <p>${(quantity * productData.price).toFixed(2)}</p>
-            <Button size="sm" onClick={() => cart.deleteFromCart(id)}>Remove</Button>
-            <hr></hr>
+            <div className="product-field"> 
+                <p>each: ${productData.price}</p>
+                <p>total: {quantity}</p>
+            </div>
+            <div className="product-field">
+                <p>${(quantity * productData.price).toFixed(2)}</p> 
+                <Button className="button" size="sm" onClick={() => cart.deleteFromCart(id)}>Remove</Button>
+            </div>
+            </div>
+            <hr />
         </>
     )
 

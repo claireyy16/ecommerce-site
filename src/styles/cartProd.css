@@ -1,0 +1,24 @@
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+    gap: 16px; 
+    align-items: center; 
+    text-align: center;
+
+  }
+  
+  /* Optional: Style the button for better visual appearance */
+  .button {
+    grid-column: span 1; /* Span one column */
+  }
+  
+  .product-field {
+    height: 75px;
+    text-align: center;
+  }
+
+  hr {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
