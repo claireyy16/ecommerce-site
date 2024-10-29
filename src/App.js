@@ -13,6 +13,7 @@ import { CartProvider } from "./cartcontext";
 
 function App() {
   return (
+    
     <CartProvider>
     <Container>
       <NavBarComponent></NavBarComponent>
