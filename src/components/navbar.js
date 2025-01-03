@@ -32,7 +32,7 @@ function NavBarComponent () {
 
     return (
         <>
-        <Navbar expand="sm">
+        <Navbar className="nav" expand="sm">
         <Navbar.Brand href='/'>claire's crochet!</Navbar.Brand>
         <Nav className="me-auto"> 
             <Nav.Link href='/'>home</Nav.Link>
