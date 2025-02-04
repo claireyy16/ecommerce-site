@@ -27,7 +27,7 @@ export function CartProvider({ children }) {
     function addOneToCart(id) {
         const quantity = getProductQuantity(id);
         const productData = getProductData(id);
-        console.log('Product Data:', productData); // Add this line
+        //console.log('Product Data:', productData); 
 
         if (quantity === 0) {
             setCartProducts([

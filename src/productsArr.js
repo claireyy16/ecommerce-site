@@ -27,11 +27,11 @@ const PRODUCTS = [
 ];
 
 function getProductData(id) {
-    console.log(id);
+    //console.log(id);
     let productData = PRODUCTS.find(product => {
         return product.id === id;
     });
-        console.log(productData);
+        //console.log(productData);
 
     if (productData === undefined) {
         console.log("Product data does not exist for ID:" + id);

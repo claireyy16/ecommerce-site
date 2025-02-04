@@ -12,7 +12,9 @@ function NavBarComponent () {
     const handleShow = () => setShow(true);
 
     const checkout = async () => {
+        //console.log("Cart items:", cart.items);
         console.log("checkout!");
+        //'https://claireycrochet.netlify.app/checkout'
         await fetch('http://localhost:4000/checkout', {
             method: "POST",
             headers: {
