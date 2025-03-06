@@ -1,0 +1,60 @@
+.slider-container {
+    margin: 40px 0;
+    width: 100%;
+  }
+  
+  .portfolio-title {
+    margin-bottom: 20px;
+    color: #612c70;
+    font-weight: 600;
+  }
+  
+  .slider-wrapper {
+    padding: 10px 0;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Customize the slider appearance to match your site's theme */
+  .react-card-slider {
+    background-color: transparent !important;
+  }
+  
+  .react-card-slider .slide-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .react-card-slider .slide-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .react-card-slider .slide-title {
+    color: #612c70;
+    font-weight: 600;
+  }
+  
+  .react-card-slider .slide-description {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .additional-info {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fdf4f9;
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  .additional-info h3 {
+    color: #612c70;
+    margin-bottom: 15px;
+  }
+  
+  .additional-info p {
+    line-height: 1.6;
+    text-align: left;
+  }
