@@ -1,60 +1,91 @@
+/* src/styles/slider.css */
+
+.additional-info p {
+  text-align: left;
+}
+
 .slider-container {
-    margin: 40px 0;
-    width: 100%;
-  }
-  
-  .portfolio-title {
-    margin-bottom: 20px;
-    color: #612c70;
-    font-weight: 600;
-  }
-  
-  .slider-wrapper {
-    padding: 10px 0;
-    max-width: 100%;
-    overflow: hidden;
-  }
-  
-  /* Customize the slider appearance to match your site's theme */
-  .react-card-slider {
-    background-color: transparent !important;
-  }
-  
-  .react-card-slider .slide-card {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .react-card-slider .slide-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  .react-card-slider .slide-title {
-    color: #612c70;
-    font-weight: 600;
-  }
-  
-  .react-card-slider .slide-description {
-    color: #666;
-    font-size: 14px;
-  }
-  
-  .additional-info {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #fdf4f9;
-    border-radius: 10px;
-    text-align: left;
-  }
-  
-  .additional-info h3 {
-    color: #612c70;
-    margin-bottom: 15px;
-  }
-  
-  .additional-info p {
-    line-height: 1.6;
-    text-align: left;
-  }
+  margin: 40px 0;
+  width: 100%;
+}
+
+.portfolio-title {
+  margin-bottom: 20px;
+  color: #612c70;
+  font-weight: 600;
+}
+
+.slider-wrapper {
+  padding: 10px 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Force card expansion and proper text display */
+.react-card-slider {
+  background-color: transparent !important;
+  padding-bottom: 50px !important;
+}
+
+/* Make cards much larger */
+.react-card-slider .slide {
+  width: 320px !important;
+  max-width: 90% !important;
+  margin: 10px !important;
+}
+
+.react-card-slider .slide-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: auto !important;
+  min-height: 450px !important; /* Increased height for more content */
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.react-card-slider .slide-title {
+  color: #612c70;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 5px 5px;
+  margin-top: 5px;
+}
+
+/* Make the description text display properly */
+.react-card-slider .slide-description {
+  color: #666;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  padding: 10px !important;
+  height: auto !important; /* Allow height to expand */
+  overflow: visible !important; /* Prevent text from being cut off */
+  white-space: normal !important; /* Allow text to wrap */
+  text-overflow: clip !important; /* Don't use ellipsis */
+  display: block !important;
+  text-align: left !important;
+}
+
+/* Critical fix for text container */
+.react-card-slider .slide-description-wrapper {
+  height: auto !important;
+  min-height: 150px !important; /* Much more space for text */
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* Better content organization */
+.react-card-slider .slide-content {
+  padding: 0 10px 15px;
+  flex-grow: 1;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between;
+  height: auto !important;
+}
+
+/* Improve image handling */
+.react-card-slider .slide-img {
+  height: 200px !important;
+  object-fit: cover !important;
+}
