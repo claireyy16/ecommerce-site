@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Card, Modal, Button, Badge } from 'react-bootstrap';
+import { Container, Card, Modal, Button, Badge } from 'react-bootstrap';
+//Row, Col,
 import './portfolio.css';
 
 const Portfolio = () => {
