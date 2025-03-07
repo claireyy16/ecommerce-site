@@ -17,23 +17,23 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      title: "Portfolio Website",
-      description: "Personal portfolio website showcasing my skills and projects.",
+      title: "Pacemaker Simulator Training Game",
+      description: "Training software for JHMI nurses that syncs to a Raspberry Pi simulator",
       image: "/images/portfolio.jpg", // Replace with your actual image path
-      techStack: ["React", "CSS", "JavaScript"],
+      techStack: ["React", "CSS", "JavaScript", "Python", "Databasing"],
       githubLink: "https://github.com/claireyy16/portfolio",
       liveLink: "https://clairecui.dev",
-      longDescription: "My personal portfolio site designed to showcase my skills and projects. Features a clean, modern design with sections for about me, skills, projects, and contact information."
+      longDescription: "I worked with nurses from the Johns Hopkins Medical Institution to design training software for external pacemakers. Created a React app with authentication linked to a Raspberry Pi simulator."
     },
     {
       id: 3,
-      title: "Task Management App",
-      description: "A productivity application for managing daily tasks and projects.",
+      title: "Nutrition Tracking App",
+      description: "updating",
       image: "/images/task-app.jpg", // Replace with your actual image path
-      techStack: ["React", "Firebase", "Material UI"],
+      techStack: ["React", "Nutritionix API", "Tailwind"],
       githubLink: "https://github.com/claireyy16/task-manager",
       liveLink: "https://taskmanager-demo.netlify.app",
-      longDescription: "A comprehensive task management application that allows users to create, organize, and track their tasks. Features include task categorization, due dates, priority levels, and progress tracking."
+      longDescription: "A ve task management application that allows users to create, organize, and track their tasks. Features include task categorization, due dates, priority levels, and progress tracking."
     },
     // Add more projects as needed
   ];
@@ -53,7 +53,10 @@ const Portfolio = () => {
   return (
     <Container className="projects-container">
       <h1 className="projects-title">My Projects</h1>
-      <p className="projects-subtitle">Check out some of my recent work</p>
+      <p className="projects-subtitle">Check out some of my recent work
+        <br/>I am currently working on multiple projects through work and design teams so this website is updating slowly - the live links do not work yet - but my <a href="https://drive.google.com/file/d/1aZSqBqtx_b_AJgYjLDT_yyDvy_HHse8s/view?usp=sharing">resume</a> is more frequent as well as my LinkedIn and GitHub which can all be found in my <a href='/aboutme'>about me</a> section.
+        <br/>Feel free to reach out to me to learn more about any of my projects or experience!
+      </p>
       
       <div className="projects-row">
         {projects.map((project) => (

@@ -9,7 +9,7 @@ import Cancel from "./pages/cancel";
 import Home from "./pages/home";
 import AboutMe from "./pages/aboutme";
 import { CartProvider } from "./cartcontext";
-import { Portfolio } from "./test/portfolio";
+import Portfolio from "./test/portfolio";
 
 
 
@@ -20,7 +20,7 @@ function App() {
       <NavBarComponent id="navbar"></NavBarComponent>
       <BrowserRouter>
         <Routes>
-          <Route index element={<Home />} />
+          <Route index element={<Portfolio />} />
           <Route path="store" element={<Store /> }/>
           <Route path="aboutMe" element={<AboutMe />}/>
           <Route path="success" element={<Success />} />
