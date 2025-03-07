@@ -32,12 +32,15 @@ function NavBarComponent () {
 
     const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
 
+    //<Nav.Link href='portfolio'>portfolio</Nav.Link>
+
     return (
         <>
         <Navbar className="nav" expand="sm">
         <Navbar.Brand href='/'>claire's crochet!</Navbar.Brand>
         <Nav className="me-auto"> 
             <Nav.Link href='/'>home</Nav.Link>
+            <Nav.Link href='portfolio'>portfolio</Nav.Link>
             <Nav.Link href="store">store</Nav.Link>
             <Nav.Link href='aboutme'>about me</Nav.Link>
         </Nav>

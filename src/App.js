@@ -9,6 +9,8 @@ import Cancel from "./pages/cancel";
 import Home from "./pages/home";
 import AboutMe from "./pages/aboutme";
 import { CartProvider } from "./cartcontext";
+import { Portfolio } from "./test/portfolio";
+
 
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
           <Route path="aboutMe" element={<AboutMe />}/>
           <Route path="success" element={<Success />} />
           <Route path="cancel" element={<Cancel />} />
+          <Route path="portfolio" element={<Portfolio />} />
         </Routes>      
       </BrowserRouter>
     </Container>

@@ -1,0 +1,198 @@
+/* Projects Container Styling */
+.projects-container {
+    padding: 40px 20px;
+    background-color: #ffe9f4; /* Matching your app's background color */
+  }
+  
+  .projects-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .projects-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  /* Project Card Styling */
+  .project-card {
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-img-container {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .project-card:hover .project-image {
+    transform: scale(1.05);
+  }
+  
+  .placeholder-image {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9862a2;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .project-card .card-body {
+    padding: 1.5rem;
+  }
+  
+  .project-card .card-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 15px 0;
+  }
+  
+  .tech-badge {
+    background-color: #9862a2 !important;
+    font-weight: 500;
+    padding: 0.4rem 0.7rem;
+    border-radius: 30px;
+  }
+  
+  .learn-more-btn {
+    background-color: #9862a2 !important;
+    border: none;
+    box-shadow: 0 0 0 100vmax inset rgb(0 0 0/var(--o,0%));
+    transition: .4s;
+    width: 100%;
+  }
+  
+  .learn-more-btn:hover {
+    --o: 40%;
+  }
+  
+  /* Modal Styling */
+  .modal-img-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .modal-project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .modal-placeholder-image {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9862a2;
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+  
+  .tech-stack-modal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .tech-badge-modal {
+    background-color: #9862a2 !important;
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    border-radius: 30px;
+  }
+  
+  .project-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .github-btn, .live-btn {
+    padding: 0.5rem 1.5rem;
+    background-color: #9862a2 !important;
+    border: none;
+    box-shadow: 0 0 0 100vmax inset rgb(0 0 0/var(--o,0%));
+    transition: .4s;
+  }
+  
+  .github-btn:hover, .live-btn:hover {
+    --o: 40%;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 992px) {
+    .projects-title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .project-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .github-btn, .live-btn {
+      width: 100%;
+    }
+  }
+  
+  /* Custom Row Layout */
+  .projects-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+  
+  .project-col {
+    flex: 0 0 calc(33.333% - 30px);
+    margin: 0 15px 30px;
+  }
+  
+  @media (max-width: 992px) {
+    .project-col {
+      flex: 0 0 calc(50% - 30px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .project-col {
+      flex: 0 0 calc(100% - 30px);
+    }
+  }
