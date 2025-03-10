@@ -3,6 +3,10 @@ import { Container, Card, Modal, Button, Badge } from 'react-bootstrap';
 //Row, Col,
 import './portfolio.css';
 
+import commerce from '../assets/commerecePic.jpg';
+import pacesim from '../assets/pacesimPic.jpg';
+import spidermanImage from '../assets/spiderman.jpg';
+
 const Portfolio = () => {
   // Sample project data - replace with your actual projects
   const projects = [
@@ -10,21 +14,21 @@ const Portfolio = () => {
       id: 1,
       title: "Claire's Crochet E-commerce",
       description: "An e-commerce site built with React and Stripe integration for selling crocheted items.",
-      image: "/images/crochet-ecommerce.jpg", // Replace with your actual image path
+      image: commerce, // Replace with your actual image path
       techStack: ["React", "Stripe API", "Bootstrap", "CSS"],
       githubLink: "https://github.com/claireyy16/ecommerce-site",
-      liveLink: "https://claireycrochet.netlify.app",
+      liveLink: "https://claireycrochet.netlify.app/store",
       longDescription: "This project was created to combine my passion for crocheting with web development. It features a full shopping cart system, Stripe payment integration, and responsive design. Users can browse products, add them to cart, and checkout securely."
     },
     {
       id: 2,
       title: "Pacemaker Simulator Training Game",
       description: "Training software for JHMI nurses that syncs to a Raspberry Pi simulator",
-      image: "/images/portfolio.jpg", // Replace with your actual image path
+      image: pacesim, // Replace with your actual image path
       techStack: ["React", "CSS", "JavaScript", "Python", "Databasing"],
       githubLink: "https://github.com/claireyy16/portfolio",
-      liveLink: "https://clairecui.dev",
-      longDescription: "I worked with nurses from the Johns Hopkins Medical Institution to design training software for external pacemakers. Created a React app with authentication linked to a Raspberry Pi simulator."
+      liveLink: "https://claireycrochet.netlify.app/",
+      longDescription: "I worked with nurses from the Johns Hopkins Medical Institution to design training software for external pacemakers. On the left, is the screen for the external pacemaker simulator, which is a Raspberry Pi with corresponding dials. On the right, is our training interface where users log in and track their progress with each module."
     },
     {
       id: 3,
@@ -55,7 +59,7 @@ const Portfolio = () => {
     <Container className="projects-container">
       <h1 className="projects-title">My Projects</h1>
       <p className="projects-subtitle">Check out some of my recent work
-        <br/>I am currently working on multiple projects through work and design teams so this website is updating slowly - the live links do not work yet - but my <a href="https://drive.google.com/file/d/1aZSqBqtx_b_AJgYjLDT_yyDvy_HHse8s/view?usp=sharing">resume</a> is more frequent as well as my LinkedIn and GitHub which can all be found in my <a href='/aboutme'>about me</a> section.
+        <br/>I am currently working on multiple projects through work and design teams so this website is updating slowly - the live links do not work yet - but my <a href="https://drive.google.com/file/d/1OkY6Y0Yefewj6TAsj9m7iZr5u485KFvm/view?usp=sharing">resume</a> is more frequent as well as my LinkedIn and GitHub which can all be found in my <a href='/aboutme'>about me</a> section.
         <br/>Feel free to reach out to me to learn more about any of my projects or experience!
       </p>
       
