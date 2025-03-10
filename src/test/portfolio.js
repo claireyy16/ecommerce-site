@@ -5,7 +5,6 @@ import './portfolio.css';
 
 import commerce from '../assets/commerecePic.jpg';
 import pacesim from '../assets/pacesimPic.jpg';
-import spidermanImage from '../assets/spiderman.jpg';
 
 const Portfolio = () => {
   // Sample project data - replace with your actual projects
