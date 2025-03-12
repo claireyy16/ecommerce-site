@@ -5,6 +5,7 @@ import './portfolio.css';
 
 import commerce from '../assets/commerecePic.jpg';
 import pacesim from '../assets/pacesimPic.jpg';
+import nutrition from "../assets/nutrition.jpg";
 
 const Portfolio = () => {
   // Sample project data - replace with your actual projects
@@ -32,12 +33,12 @@ const Portfolio = () => {
     {
       id: 3,
       title: "Nutrition Tracking App",
-      description: "updating",
-      image: "/images/task-app.jpg", // Replace with your actual image path
+      description: "A macronutrient tracker with Nutritionix API search functionality to track your daily meals",
+      image: nutrition, // Replace with your actual image path
       techStack: ["React", "Nutritionix API", "Tailwind"],
       githubLink: "https://github.com/claireyy16/task-manager",
       liveLink: "https://taskmanager-demo.netlify.app",
-      longDescription: "A ve task management application that allows users to create, organize, and track their tasks. Features include task categorization, due dates, priority levels, and progress tracking."
+      longDescription: "A nutrition tracking app that allows you to set goals for the major macronutrients and track how you are doing each day. There is search functionality with the Nutritionix API so you can search for your food items and then find the information to put them into your tracker. I am working on auto inputting information from the API."
     },
     // Add more projects as needed
   ];
